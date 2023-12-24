@@ -16,7 +16,6 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import authenticateUser from "../store/auth-thunks";
 
-
 const theme = createTheme();
 
 export default function SignIn() {
@@ -88,14 +87,24 @@ export default function SignIn() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-            <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
+            <FormControlLabel
+              onClick={() =>
+                setFormData({ email: "testtt@gmail.com", password: "testtest" })
+              }
+              control={<Button color="primary" />}
+              label="Fill Test  Credentials"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
               Sign In
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
-                 
-                </Link>
+                <Link href="#" variant="body2"></Link>
               </Grid>
               <Grid item>
                 <Link href="/signup" variant="body2">

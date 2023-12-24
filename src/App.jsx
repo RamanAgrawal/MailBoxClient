@@ -64,7 +64,7 @@ function App() {
       <MailBoxModal />
       <Routes>
         {!isAuthenticated && (
-          <Route path="*" element={<Navigate replace to="/signup" />} />
+          <Route path="*" element={<Navigate replace to="/signin" />} />
         )}
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
